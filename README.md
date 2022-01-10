@@ -1,8 +1,8 @@
 # zAmericanEnglish-API
 <p align="center">
-> **This APIS provided by:**
-> **Github: @PluginX**
-> **Telegram: @Plugin**
+  This APIS provided by:
+  Github: @PluginX**
+  Telegram: @Plugin
 <p/>
 <p align="center">
 <p/>
