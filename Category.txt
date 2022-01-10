@@ -1,0 +1,16 @@
+import requests                            # METHOD = POST #
+
+data = {
+  "levelId": "5af2970727f13a137cbd1a39"
+}
+
+headers = {
+    'Sid': sid,                   # [ Get the sid from login or register ]
+}
+
+r = requests.post('https://staging.zamericanenglish.com:8004/v2/study/categories',data=data,headers=headers).json
+print(r)
+
+# -------------------------------------------------------------------------------------------
+# response
+# {"status":200,"data":[{"title":"كورس المحادثة","image":"https://s3.eu-west-2.amazonaws.com/zamericanenglishv3live/categories/80310_conversation.png","isDelete":false,"_id":"5b5949bf9756c263b9e4b770","__v":0,"created":"2018-07-26T04:10:39.141Z","levelId":"5af2970727f13a137cbd1a39","updated":"2019-06-15T07:58:07.395Z","order_id":5},{"title":"كورس القواعد","image":"https://s3.eu-west-2.amazonaws.com/zamericanenglishv3live/categories/94189_Grammar.png","isDelete":false,"_id":"5b5949d29756c263b9e4b771","__v":0,"created":"2018-07-26T04:10:58.170Z","levelId":"5af2970727f13a137cbd1a39","updated":"2019-06-15T08:04:09.587Z","order_id":2},{"title":"كورس الكتابة","image":"https://s3.eu-west-2.amazonaws.com/zamericanenglishv3live/categories/67891_writing.png","isDelete":false,"_id":"5b5949e49756c263b9e4b772","__v":0,"created":"2018-07-26T04:11:16.587Z","levelId":"5af2970727f13a137cbd1a39","updated":"2019-06-15T08:23:19.181Z","order_id":7},{"title":"كورس القراءة","image":"https://s3.eu-west-2.amazonaws.com/zamericanenglishv3live/categories/86327_Reading.png","isDelete":false,"_id":"5b587d1f894b2d1cfdae7bc1","__v":0,"created":"2018-07-25T13:37:35.858Z","levelId":"5af2970727f13a137cbd1a39","updated":"2019-06-15T07:56:43.763Z","order_id":4},{"title":"نصائح لتعلم اسرع","image":"https://s3.eu-west-2.amazonaws.com/zamericanenglishv3live/categories/51798_advice.png","isDelete":false,"_id":"5b594f4a9756c263b9e4b781","__v":0,"created":"2018-07-26T04:34:18.425Z","levelId":"5af2970727f13a137cbd1a39","updated":"2019-06-15T08:20:32.289Z","order_id":8},{"title":"كورس الصوتيات","image":"https://s3.eu-west-2.amazonaws.com/zamericanenglishv3live/categories/21750_phonics.png","isDelete":false,"_id":"5b5949ad9756c263b9e4b76f","__v":0,"created":"2018-07-26T04:10:21.318Z","levelId":"5af2970727f13a137cbd1a39","updated":"2019-06-15T08:12:25.412Z","order_id":3},{"title":"تعلم من الصفر","image":"https://s3.eu-west-2.amazonaws.com/zamericanenglishv3live/categories/70567_from-zero.png","isDelete":false,"_id":"5b4609b35a38d355b5c1093b","__v":0,"created":"2018-07-11T13:44:19.627Z","levelId":"5af2970727f13a137cbd1a39","updated":"2020-10-01T06:36:13.130Z","order_id":1},{"title":"كورس الإستماع","image":"https://s3.eu-west-2.amazonaws.com/zamericanenglishv3live/categories/57012_listening.png","isDelete":false,"_id":"5b58829b894b2d1cfdae7bdf","__v":0,"created":"2018-07-25T14:00:59.884Z","levelId":"5af2970727f13a137cbd1a39","updated":"2019-06-15T08:15:05.912Z","order_id":6}]}
