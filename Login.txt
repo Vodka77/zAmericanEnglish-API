@@ -1,0 +1,14 @@
+import requests,random,string                            # METHOD = POST #
+
+data = {
+  "email": "3rabforttOEN@gmail.com",
+  "password": "123ya123",
+  "deviceToken": "fCatwPKabTE:APA91bHZcota9QV9qqjd6xOl1j1QXPbYsascuM60Yz1IxSw3RT63e4cEtpUW0Z4iuU5Ya1cq34-TflHBRLjW_GFdOpaicCzsVXYINIniCqMSd1CScaaKS6nV0fvCvQ3CWrqcWNnoU7JW"
+}
+
+r = requests.post('https://staging.zamericanenglish.com:8004/v2/users/login',data=data).json
+print(r) 
+
+# -------------------------------------------------------------------------------------------
+# response
+# {"status":200,"data":{"fullName":"mynameisyazantOEN","profileImage":"","mobile":"","birthDate":"","email":"3rabforttoen@gmail.com","_id":"61dc743d1b8659066c5f8bf4","sid":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGM3NDNkMWI4NjU5MDY2YzVmOGJmNCIsImlhdCI6MTY0MTgzNzkzMywiZXhwIjoxNjUwNDc3OTMzfQ.FXkSb-cjpP2W9gZgZIM0g9QUyo99NNJp-v5FZYYDhm8"},"message":"User logged in successfully"}
