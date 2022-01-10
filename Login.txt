@@ -1,4 +1,4 @@
-import requests,random,string                            # METHOD = POST #
+import requests                         # METHOD = POST #
 
 data = {
   "email": "3rabforttOEN@gmail.com",
