@@ -1,0 +1,21 @@
+import requests
+
+data = {
+  "totalScore": 12,
+  "score": 12,
+  "categoryId": "5b4609b35a38d355b5c1093b",
+  "lessonId": "5b460f3d5a38d355b5c1093c",
+  "testType": 0,
+  "levelId": ""
+}
+
+headers = {
+    'Sid': sid,                   # [ Get the sid from login or register ]
+}
+
+r = requests.post('https://staging.zamericanenglish.com:8004/v2/study/testSubmit',data=data,headers=headers).json
+print(r)
+
+# -------------------------------------------------------------------------------------------
+# response
+# {"status":200,"last":0,"message":"You have passed this quiz"}
