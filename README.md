@@ -1,9 +1,9 @@
 # zAmericanEnglish-API
-
-This APIS provided by:
-Github: PluginX
-Telegram: Plugin
-
+<p align="center">
+> **This APIS provided by:**
+> **Github: @PluginX**
+> **Telegram: @Plugin**
+<p/>
 <p align="center">
 <p/>
 <p align="center">
