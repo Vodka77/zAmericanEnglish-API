@@ -1,0 +1,16 @@
+import requests                            # METHOD = POST #
+
+data = {
+  "lessonId": "5b460f3d5a38d355b5c1093c"
+}
+
+headers = {
+    'Sid': sid,                   # [ Get the sid from login or register ]
+}
+
+r = requests.post('https://staging.zamericanenglish.com:8004/v2/study/lessonDetails',data=data,headers=headers).json
+print(r) 
+
+# -------------------------------------------------------------------------------------------
+# response
+# {"status":200,"data":{"title":"الدرس الأول - الصفات","videoTitle":"الصفات","videoUrl":"<iframe src= \"https://player.vimeo.com/video/417955486?color=ffffff&byline=0&portrait=0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\" mozallowfullscreen=\"mozallowfullscreen\" msallowfullscreen=\"msallowfullscreen\" oallowfullscreen=\"oallowfullscreen\" webkitallowfullscreen=\"webkitallowfullscreen\"></iframe>","videoId":"417955486","youtubeId":"https://www.youtube.com/watch?v=77IK9T45kiU","grammer":"<p></p><p><b>يمكنك تحميل ملخص هذه الحلقة من هنا</b></p><p></p><a target=\"_blank\" rel=\"nofollow\" href=\"http://bit.ly/ZeroL1_01\">http://bit.ly/ZeroL1_01</a><br><p></p>","grammer_ar":"<p></p><p><b>يمكنك تحميل ملخص هذه الحلقة من هنا</b></p><p><b><a target=\"_blank\" rel=\"nofollow\" href=\"http://bit.ly/ZeroL1_01\">http://bit.ly/ZeroL1_01</a><br></b></p><p></p>","zipFile":"https://s3.eu-west-2.amazonaws.com/zamericanenglishv3live/lesson/5b4609b35a38d355b5c1093b/5b460f3d5a38d355b5c1093c.zip","offlineVideoId":"http://zamericanenglish.com/media_1560347159365_480.mp4","originalVideo":"http://zamericanenglish.com/media_1560347159365_org.mp4","videoThumbFlag":1,"zipFlag":1,"offlineVideoId_ios":"http://zamericanenglish.com/media_1560347159365_ios.mp4","zipFlag_ios":1,"zipEditFlag_ios":0,"publishFlag":1,"isDelete":false,"lessonPosition":1,"hlsVideoEncrypted":"cx74h+hLctWs0KXdATzyB0lXqVeMG8rRU75zjt+CyDsqQSEr58J9+lNpJf+9pUaA2Htlr7ZsrbJt32rVp7FiKsnu9AcioFTIqadxjK3B4KIk79SFVEZgfRrbNeFP5fkN12vw7whUqX4GOyGAVx9ZgC1j2JDCTzNyeMUdu5ulbeke4iEnIXZgeeShXH6QMR/K/Szo05tXmYjeZSz7TLsvRdQHpMiJ0px5HS2NvqvGeR8=","_id":"5b460f3d5a38d355b5c1093c","categoryId":"5b4609b35a38d355b5c1093b","created":"2018-07-11T14:07:57.298Z","updated":"2020-10-01T06:36:43.201Z","zipEditFlag":0,"zipFile_ios":"https://s3.eu-west-2.amazonaws.com/zamericanenglishv3live/lesson/5b4609b35a38d355b5c1093b/5b460f3d5a38d355b5c1093c_ios.zip","levelId":"5af2970727f13a137cbd1a39","is_inplaylist":0}}
