@@ -10,7 +10,7 @@ data = {
   "password": "123ya123"
 }
 
-r = requests.post('https://staging.zamericanenglish.com:8004/v2/users/signup',data=data).text
+r = requests.post('https://staging.zamericanenglish.com:8004/v2/users/signup',data=data).json
 print(r) 
 print(f'Email: Bot{a}@gmail.com\nName: theBot{a}\nPassword: 123ya123')
 
