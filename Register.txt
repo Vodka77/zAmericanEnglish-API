@@ -1,0 +1,19 @@
+import requests,random,string                            # METHOD = POST #
+
+a = random.choice(string.ascii_letters)+random.choice(string.ascii_letters)+random.choice(string.ascii_letters)+random.choice(string.ascii_letters)+random.choice(string.ascii_letters)
+
+data = {
+  "fcmId": "",
+  "email": f"Bot{a}@gmail.com",
+  "deviceToken": "fCatwPKabTE:APA91bHZcota9QV9qqjd6xOl1j1QXPbYsascuM60Yz1IxSw3RT63e4cEtpUW0Z4iuU5Ya1cq34-TflHBRLjW_GFdOpaicCzsVXYINIniCqMSd1CScaaKS6nV0fvCvQ3CWrqcWNnoU7JW",
+  "fullName": f"theBot{a}",
+  "password": "123ya123"
+}
+
+r = requests.post('https://staging.zamericanenglish.com:8004/v2/users/signup',data=data).text
+print(r) 
+print(f'Email: Bot{a}@gmail.com\nName: theBot{a}\nPassword: 123ya123')
+
+# -------------------------------------------------------------------------------------------
+# response
+# {"status":200,"data":{"userId":"8538127","fullName":"mynameisyazantOEN","role":0,"verifyToken":"2261aa09cd9d8a3114ad","sourceType":"email","birthDate":"","email":"3rabforttoen@gmail.com","emailVerify":false,"mobile":"","status":true,"profileImage":"","fcmId":"","language":"","osType":"","appVersion":"","unlockedLevels":[],"unlockedLessons":[],"_id":"61dc743d1b8659066c5f8bf4","expires":"2022-01-11T18:00:29.889Z","sid":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGM3NDNkMWI4NjU5MDY2YzVmOGJmNCIsImlhdCI6MTY0MTgzNzYyOSwiZXhwIjoxNjQyNDQyNDI5fQ.IRAR9nJjoAWsjRPtvHHYIiZM7wImlpNcppsBsRIGojw"},"message":"User was successfully registered"}
